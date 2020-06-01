@@ -22,3 +22,5 @@ npm -v
 #Nest and Angular CLIs
 sudo npm i -g @nestjs/cli
 sudo npm install -g @angular/cli
+#Postman
+sudo snap install postman
