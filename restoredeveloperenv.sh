@@ -24,6 +24,18 @@ sudo npm i -g @nestjs/cli
 sudo npm install -g @angular/cli
 #Postman
 sudo snap install postman
+# Docker # https://tecadmin.net/install-docker-on-ubuntu/
+sudo apt-get purge docker-ce docker lxc-docker docker-engine docker.io
+sudo apt-get install curl apt-transport-https ca-certificates software-properties-common -y
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add 
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get update
+sudo apt-get install docker-ce -y
+sudo usermod -aG docker $USER
+# Docker-Compose
+sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
 # OpenShot (Video Editor)
 sudo add-apt-repository ppa:openshot.developers/ppa
 sudo apt-get update
