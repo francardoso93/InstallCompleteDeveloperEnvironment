@@ -24,7 +24,7 @@ sudo npm i -g @nestjs/cli
 sudo npm install -g @angular/cli
 #Postman
 sudo snap install postman
-OpenShot (Video Editor)
+# OpenShot (Video Editor)
 sudo add-apt-repository ppa:openshot.developers/ppa
 sudo apt-get update
 sudo apt-get install openshot-qt
