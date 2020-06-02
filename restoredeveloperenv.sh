@@ -41,6 +41,10 @@ curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s http
 chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 kubectl version --client
+# K3S (Lightweight Kubernetes)
+curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644
+mkdir .kube
+cp /etc/rancher/k3s/k3s.yaml .kube/
 # Peek (Gif Recorder)
 sudo add-apt-repository ppa:peek-developers/stable
 sudo apt-get update
