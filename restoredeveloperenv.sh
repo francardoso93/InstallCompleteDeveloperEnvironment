@@ -41,7 +41,11 @@ curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s http
 chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 kubectl version --client
+# Peek (Gif Recorder)
+sudo add-apt-repository ppa:peek-developers/stable
+sudo apt-get update
+sudo apt-get install peek -y
 # OpenShot (Video Editor)
 sudo add-apt-repository ppa:openshot.developers/ppa
 sudo apt-get update
-sudo apt-get install openshot-qt
+sudo apt-get install openshot-qt -y
