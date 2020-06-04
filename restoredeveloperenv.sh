@@ -45,6 +45,8 @@ kubectl version --client
 curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644
 mkdir .kube
 cp /etc/rancher/k3s/k3s.yaml .kube/
+# Helm (Kub package manager)
+sudo snap install helm --classic
 # Peek (Gif Recorder)
 sudo add-apt-repository ppa:peek-developers/stable
 sudo apt-get update
@@ -53,6 +55,16 @@ sudo apt-get install peek -y
 sudo add-apt-repository ppa:openshot.developers/ppa
 sudo apt-get update
 sudo apt-get install openshot-qt -y
+# ZSH
+sudo apt install zsh -y
+sudo apt-get install powerline fonts-powerline -y
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+chsh -s /bin/zsh
+# Terminator
+sudo add-apt-repository ppa:gnome-terminator/nightly
+sudo apt-get update
+sudo apt-get install terminator
 # First F5 VPN Steps (Firefox Version 51) # https://fluig.totvs.com/portal/p/10097/ecmnavigation?app_ecm_navigation_doc=5372312
 sudo apt-get purge firefox -y
 sudo rm -rf ~/.mozilla/firefox/
