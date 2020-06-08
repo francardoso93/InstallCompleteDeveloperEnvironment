@@ -3,7 +3,8 @@ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-ke
 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 sudo apt-get update ; sudo apt-get install google-chrome-stable -y
 #VsCode
-sudo snap install --classic code # or code-insiders
+sudo snap install --classic code # or code-insiders#
+# After that, remember to increase 'file changes watch': https://github.com/flathub/com.visualstudio.code/issues/29
 #GIT
 sudo apt-add-repository ppa:git-core/ppa
 sudo apt-get update
