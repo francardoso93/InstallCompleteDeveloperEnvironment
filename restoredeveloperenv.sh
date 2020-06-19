@@ -48,10 +48,21 @@ mkdir .kube
 cp /etc/rancher/k3s/k3s.yaml .kube/
 # Helm (Kub package manager)
 sudo snap install helm --classic
+# DotNet
+wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+sudo apt-get update; \
+  sudo apt-get install -y apt-transport-https && \
+  sudo apt-get update && \
+  sudo apt-get install -y dotnet-sdk-3.1
 # Peek (Gif Recorder)
 sudo add-apt-repository ppa:peek-developers/stable
 sudo apt-get update
 sudo apt-get install peek -y
+# OBS (Video Recorder)
+sudo add-apt-repository ppa:pbsproject/obs-studio
+sudo apt-get update
+sudo apt-get install obs-studio
 # OpenShot (Video Editor)
 sudo add-apt-repository ppa:openshot.developers/ppa
 sudo apt-get update
