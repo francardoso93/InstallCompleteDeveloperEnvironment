@@ -83,7 +83,7 @@
 # sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret -y
 # # JAVA + Eclipse
 # sudo apt-get install default-jdk -y
-sudo snap install --classic eclipse 
+# sudo snap install --classic eclipse 
 # # First F5 VPN Steps (Firefox Version 51) # https://fluig.totvs.com/portal/p/10097/ecmnavigation?app_ecm_navigation_doc=5372312
 # sudo apt-get purge firefox -y
 # sudo rm -rf ~/.mozilla/firefox/
