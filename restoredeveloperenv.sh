@@ -21,8 +21,8 @@
 # node -v
 # npm -v
 #Nest and Angular CLIs
-sudo npm i -g @nestjs/cli -y
-sudo npm install -g @angular/cli
+# sudo npm i -g @nestjs/cli -y
+# sudo npm install -g @angular/cli
 # #Postman
 # sudo snap install postman
 # # Docker # https://tecadmin.net/install-docker-on-ubuntu/
@@ -85,20 +85,8 @@ sudo npm install -g @angular/cli
 # # JAVA + Eclipse
 # sudo apt-get install default-jdk -y
 # sudo snap install --classic eclipse 
-# # First F5 VPN Steps (Firefox Version 51) # https://fluig.totvs.com/portal/p/10097/ecmnavigation?app_ecm_navigation_doc=5372312
-# sudo apt-get purge firefox -y
-# sudo rm -rf ~/.mozilla/firefox/
-# sudo rm -rf /usr/lib/firefox/
-# sudo rm -rf /usr/lib/firefox-addons/
-# cd /home/$USER
-# mkdir firefox_install
-# cd firefox_install
-# curl -LO https://ftp.mozilla.org/pub/firefox/releases/51.0.1/linux-x86_64/pt-BR/firefox-51.0.1.tar.bz2
-# curl -LO https://vpn2.totvs.com.br/public/download/linux_sslvpn.xpi
-# cd /opt
-# `sudo tar -jxvf /home/$USER/firefox_install/firefox-51.0.1.tar.bz2`
-# # sudo /opt/firefox/firefox # Open Firefox
-# ## Possível melhoria: E se eu baixasse direto de 'https://vpn2.totvs.com.br/public/download/linux_f5vpn.x86_64.deb'? (Sem usar o firefox)
-# #Permissions afters F5 VPN client installed
-# #sudo ln -sf /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1 /opt/f5/vpn/lib/libcrypto.so.1.0.0 
-# #sudo ln -sf /usr/lib/x86_64-linux-gnu/libssl.so.1.1 /opt/f5/vpn/lib/libssl.so.1.0.0
+# # F5 VPN # https://fluig.totvs.com/portal/p/10097/ecmnavigation?app_ecm_navigation_doc=5372312
+# wget https://vpn2.totvs.com.br/public/download/linux_f5vpn.x86_64.deb -O linux_f5vpn.x86_64.deb --no-check-certificate
+# sudo apt install ./linux_f5vpn.x86_64.deb
+# sudo ln -sf /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1 /opt/f5/vpn/lib/libcrypto.so.1.0.0 
+# sudo ln -sf /usr/lib/x86_64-linux-gnu/libssl.so.1.1 /opt/f5/vpn/lib/libssl.so.1.0.0
