@@ -67,7 +67,7 @@
 # # OpenShot (Video Editor)
 # sudo add-apt-repository ppa:openshot.developers/ppa
 # sudo apt-get update
-# sudo apt-get install openshot-qt -y
+# sudo apt-get install openshot-qt -y ##Da ultima vez que instalei assim, ficava travando durante a execucao
 # # ZSH
 # sudo apt install zsh -y
 # sudo apt-get install powerline fonts-powerline -y
