@@ -1,4 +1,4 @@
-# #Google Chrome
+#Google Chrome
 # wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 # sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 # sudo apt-get update ; sudo apt-get install google-chrome-stable -y
@@ -12,17 +12,17 @@
 # git --version
 # git config --global user.name "Francisco Cardoso"
 # git config --global user.email "francardoso@outlook.com"
-# #SSH
+# # #SSH
 # ssh-keygen
-# #Node
+# # #Node
 # sudo apt-get install curl -y
 # curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 # sudo apt-get install nodejs -y
 # node -v
 # npm -v
-# #Nest and Angular CLIs
-# sudo npm i -g @nestjs/cli
-# sudo npm install -g @angular/cli
+#Nest and Angular CLIs
+sudo npm i -g @nestjs/cli -y
+sudo npm install -g @angular/cli
 # #Postman
 # sudo snap install postman
 # # Docker # https://tecadmin.net/install-docker-on-ubuntu/
@@ -51,10 +51,10 @@
 # # DotNet
 # wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 # sudo dpkg -i packages-microsoft-prod.deb
-sudo apt-get update; \
-  sudo apt-get install -y apt-transport-https && \
-  sudo apt-get update && \
-sudo apt-get install -y dotnet-sdk-2.2
+# sudo apt-get update; \
+#   sudo apt-get install -y apt-transport-https && \
+#   sudo apt-get update && \
+# sudo apt-get install -y dotnet-sdk-2.2
 # sudo apt-get install -y dotnet-sdk-3.1
 # # Peek (Gif Recorder)
 # sudo add-apt-repository ppa:peek-developers/stable
@@ -63,7 +63,7 @@ sudo apt-get install -y dotnet-sdk-2.2
 # # OBS (Video Recorder)
 # sudo add-apt-repository ppa:pbsproject/obs-studio
 # sudo apt-get update
-# sudo apt-get install obs-studio
+# sudo apt-get install obs-studio -y
 # # OpenShot (Video Editor)
 # sudo add-apt-repository ppa:openshot.developers/ppa
 # sudo apt-get update
