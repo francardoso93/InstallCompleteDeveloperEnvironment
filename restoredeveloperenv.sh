@@ -48,6 +48,9 @@
 # cp /etc/rancher/k3s/k3s.yaml .kube/
 # # Helm (Kub package manager)
 # sudo snap install helm --classic
+# # Add Helm Rabbit Repository
+# helm repo add bitnami https://charts.bitnami.com/bitnami
+# helm repo update
 # # DotNet
 # wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 # sudo dpkg -i packages-microsoft-prod.deb
