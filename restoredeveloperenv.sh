@@ -59,6 +59,7 @@
 #   sudo apt-get update && \
 # sudo apt-get install -y dotnet-sdk-2.2
 # sudo apt-get install -y dotnet-sdk-3.1
+# echo fs.inotify.max_user_instances=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 # # Peek (Gif Recorder)
 # sudo add-apt-repository ppa:peek-developers/stable
 # sudo apt-get update
@@ -86,7 +87,8 @@
 # sudo apt update
 # sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret -y
 # # JAVA + Eclipse
-# sudo apt-get install default-jdk -y
+### sudo apt-get install default-jdk -y # Latest
+# sudo apt install openjdk-8-jdk -y #JDK8
 # sudo snap install --classic eclipse 
 # # F5 VPN # https://fluig.totvs.com/portal/p/10097/ecmnavigation?app_ecm_navigation_doc=5372312
 # wget https://vpn2.totvs.com.br/public/download/linux_f5vpn.x86_64.deb -O linux_f5vpn.x86_64.deb --no-check-certificate
