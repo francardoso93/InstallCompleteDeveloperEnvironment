@@ -95,3 +95,8 @@
 # sudo apt install ./linux_f5vpn.x86_64.deb
 # sudo ln -sf /usr/lib/x86_64-linux-gnu/libcrypto.so.1.1 /opt/f5/vpn/lib/libcrypto.so.1.0.0 
 # sudo ln -sf /usr/lib/x86_64-linux-gnu/libssl.so.1.1 /opt/f5/vpn/lib/libssl.so.1.0.0
+# Stremio
+wget https://dl.strem.io/linux/v4.4.106/stremio_4.4.106-1_amd64.deb
+sudo dpkg -i stremio*amd64.deb
+sudo apt install -f
+sudo dpkg -i stremio*amd64.deb
