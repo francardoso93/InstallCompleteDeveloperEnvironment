@@ -60,6 +60,7 @@ sudo apt-get update; \
   sudo apt-get update && \
 sudo apt-get install -y dotnet-sdk-2.2
 sudo apt-get install -y dotnet-sdk-3.1
+dotnet tool install --global dotnet-ef --version 2.2.6
 echo fs.inotify.max_user_instances=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 # Slack
 sudo snap install slack --classic
