@@ -76,8 +76,8 @@ asdf global nodejs 12.18.3
 node -v
 # ASDF DotNet
 asdf plugin-add dotnet-core https://github.com/emersonsoares/asdf-dotnet-core.git
-echo -e '\n. ~/.asdf/plugins/dotnet/set-dotnet-home.zsh'>> ~/.zshrc
-echo -e '\n. ~/.asdf/plugins/dotnet/set-dotnet-home.bash'>> ~/.bashrc
+echo -e '\n. $HOME/.asdf/plugins/dotnet-core/set-dotnet-home.zsh'>> ~/.zshrc
+echo -e '\n. $HOME/.asdf/plugins/dotnet/set-dotnet-home.bash'>> ~/.bashrc
 asdf install dotnet-core 2.1.809
 asdf install dotnet-core 3.1.401
 asdf global dotnet-core 3.1.401
@@ -94,6 +94,10 @@ sudo apt update
 sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret -y
 # Slack
 sudo snap install slack --classic
+# MS Teams
+wget "https://teams.microsoft.com/downloads/desktopurl?env=production&plat=linux&arch=x64&download=true&linuxArchiveType=deb" -O teams.deb
+sudo dpkg -i teams.deb
+sudo apt install ./teams.deb
 # Peek (Gif Recorder)
 sudo add-apt-repository ppa:peek-developers/stable
 sudo apt-get update
@@ -111,3 +115,4 @@ wget https://dl.strem.io/linux/v4.4.106/stremio_4.4.106-1_amd64.deb
 sudo dpkg -i stremio*amd64.deb
 sudo apt install -f
 sudo dpkg -i stremio*amd64.deb
+
