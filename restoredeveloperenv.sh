@@ -1,10 +1,10 @@
 #GIT
-#sudo apt-add-repository ppa:git-core/ppa
-#sudo apt-get update
-#sudo apt-get install git -y
-#git --version
-#git config --global user.name "Francisco Cardoso"
-#git config --global user.email "francardoso@outlook.com"
+sudo apt-add-repository ppa:git-core/ppa
+sudo apt-get update
+sudo apt-get install git -y
+git --version
+git config --global user.name "Francisco Cardoso"
+git config --global user.email "francardoso@outlook.com"
 # Google Chrome
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
