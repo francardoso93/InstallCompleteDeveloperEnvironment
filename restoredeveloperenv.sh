@@ -85,6 +85,9 @@ dotnet --version
 #Nest and Angular CLIs
 sudo npm i -g @nestjs/cli -y
 sudo npm install -g @angular/cli
+# Tweaks
+sudo add-apt-repository universe
+sudo apt install gnome-tweak-tool
 # Remmina 
 sudo apt-add-repository ppa:remmina-ppa-team/remmina-next
 sudo apt update
@@ -103,7 +106,7 @@ sudo apt-get install obs-studio -y
 sudo add-apt-repository ppa:openshot.developers/ppa
 sudo apt-get update
 sudo apt-get install openshot-qt -y ##Da ultima vez que instalei assim, ficava travando durante a execucao
-Stremio
+# Stremio
 wget https://dl.strem.io/linux/v4.4.106/stremio_4.4.106-1_amd64.deb
 sudo dpkg -i stremio*amd64.deb
 sudo apt install -f
