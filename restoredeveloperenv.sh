@@ -53,9 +53,9 @@ chsh -s /bin/zsh
 # Terminator
 sudo add-apt-repository ppa:gnome-terminator/nightly
 sudo apt-get update
-sudo apt-get install terminator
+sudo apt-get install terminator -7
 # Curl
-sudo apt install curl
+sudo apt install curl -y
 # ASDF
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 cd ~/.asdf
@@ -87,7 +87,7 @@ sudo npm i -g @nestjs/cli -y
 sudo npm install -g @angular/cli
 # Tweaks
 sudo add-apt-repository universe
-sudo apt install gnome-tweak-tool
+sudo apt install gnome-tweak-tool -y
 # Remmina 
 sudo apt-add-repository ppa:remmina-ppa-team/remmina-next
 sudo apt update
