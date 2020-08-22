@@ -98,6 +98,8 @@ sudo snap install slack --classic
 wget "https://teams.microsoft.com/downloads/desktopurl?env=production&plat=linux&arch=x64&download=true&linuxArchiveType=deb" -O teams.deb
 sudo dpkg -i teams.deb
 sudo apt install ./teams.deb
+# Isolate Workspaces
+gsettings set org.gnome.shell.extensions.dash-to-dock isolate-workspaces true
 # Peek (Gif Recorder)
 sudo add-apt-repository ppa:peek-developers/stable
 sudo apt-get update
