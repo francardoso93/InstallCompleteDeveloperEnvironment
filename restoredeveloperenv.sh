@@ -53,7 +53,7 @@ chsh -s /bin/zsh
 # Terminator
 sudo add-apt-repository ppa:gnome-terminator/nightly
 sudo apt-get update
-sudo apt-get install terminator -7
+sudo apt-get install terminator -y
 # Curl
 sudo apt install curl -y
 # ASDF
