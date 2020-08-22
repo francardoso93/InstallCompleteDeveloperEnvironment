@@ -77,7 +77,7 @@ node -v
 # ASDF DotNet
 asdf plugin-add dotnet-core https://github.com/emersonsoares/asdf-dotnet-core.git
 echo -e '\n. $HOME/.asdf/plugins/dotnet-core/set-dotnet-home.zsh'>> ~/.zshrc
-echo -e '\n. $HOME/.asdf/plugins/dotnet/set-dotnet-home.bash'>> ~/.bashrc
+echo -e '\n. $HOME/.asdf/plugins/dotnet-core/set-dotnet-home.bash'>> ~/.bashrc
 asdf install dotnet-core 2.1.809
 asdf install dotnet-core 3.1.401
 asdf global dotnet-core 3.1.401
