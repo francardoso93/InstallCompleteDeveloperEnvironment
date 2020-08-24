@@ -83,8 +83,8 @@ asdf install dotnet-core 3.1.401
 asdf global dotnet-core 3.1.401
 dotnet --version
 #Nest and Angular CLIs
-sudo npm i -g @nestjs/cli -y
-sudo npm install -g @angular/cli
+npm i -g @nestjs/cli -y
+npm install -g @angular/cli
 # Tweaks
 sudo add-apt-repository universe
 sudo apt install gnome-tweak-tool -y
