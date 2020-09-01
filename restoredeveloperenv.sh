@@ -82,6 +82,10 @@ asdf install dotnet-core 2.1.809
 asdf install dotnet-core 3.1.401
 asdf global dotnet-core 3.1.401
 dotnet --version
+# ASDF Go
+asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+asdf install golang 1.15.1
+asdf global golang 1.15.1
 #Nest and Angular CLIs
 npm i -g @nestjs/cli -y
 npm install -g @angular/cli
