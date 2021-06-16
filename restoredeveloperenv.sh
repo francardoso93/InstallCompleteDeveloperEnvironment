@@ -98,10 +98,9 @@ sudo apt update
 sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret -y
 # Slack
 sudo snap install slack --classic
-# MS Teams
-wget "https://teams.microsoft.com/downloads/desktopurl?env=production&plat=linux&arch=x64&download=true&linuxArchiveType=deb" -O teams.deb
-sudo dpkg -i teams.deb
-sudo apt install ./teams.deb
+# Mongo DB Compass
+wget https://downloads.mongodb.com/compass/mongodb-compass_1.26.1_amd64.deb
+sudo dpkg -i mongodb-compass_1.26.1_amd64.deb
 # Isolate Workspaces
 gsettings set org.gnome.shell.extensions.dash-to-dock isolate-workspaces true
 # Peek (Gif Recorder)
