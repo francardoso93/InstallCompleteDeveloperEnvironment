@@ -1,8 +1,8 @@
 #GIT
-sudo apt-add-repository ppa:git-core/ppa
-sudo apt-get update
-sudo apt-get install git -y
-git --version
+#sudo apt-add-repository ppa:git-core/ppa
+#sudo apt-get update
+#sudo apt-get install git -y
+#git --version
 git config --global user.name "Francisco Cardoso"
 git config --global user.email "francardoso@outlook.com"
 # Google Chrome
@@ -35,15 +35,15 @@ chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 kubectl version --client
 # K3S (Lightweight Kubernetes)
-curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644
-mkdir .kube
-cp /etc/rancher/k3s/k3s.yaml .kube/
+#curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644
+#mkdir .kube
+#cp /etc/rancher/k3s/k3s.yaml .kube/
 # Helm (Kub package manager)
 sudo snap install helm --classic
 # Add Helm Rabbit Repository # helm install --kubeconfig=/home/francisco/.kube/k3s.yaml rabbit bitnami/rabbitmq --namespace logistics
-helm repo add bitnami https://charts.bitnami.com/bitnami
-helm repo update
-echo fs.inotify.max_user_instances=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+#helm repo add bitnami https://charts.bitnami.com/bitnami
+#helm repo update
+#echo fs.inotify.max_user_instances=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 # ZSH
 sudo apt install zsh -y
 sudo apt-get install powerline fonts-powerline -y
@@ -70,25 +70,28 @@ asdf --version
 # ASDF Node
 asdf plugin-add nodejs
 bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
-asdf install nodejs 14.8.0  # Latest
-asdf install nodejs 12.18.3 # LTS
-asdf global nodejs 12.18.3 
+asdf install nodejs 16.13.0  
+asdf global nodejs 16.13.0 
 node -v
 # ASDF DotNet
-asdf plugin-add dotnet-core https://github.com/emersonsoares/asdf-dotnet-core.git
-echo -e '\n. $HOME/.asdf/plugins/dotnet-core/set-dotnet-home.zsh'>> ~/.zshrc
-echo -e '\n. $HOME/.asdf/plugins/dotnet-core/set-dotnet-home.bash'>> ~/.bashrc
-asdf install dotnet-core 2.1.809
-asdf install dotnet-core 3.1.401
-asdf global dotnet-core 3.1.401
-dotnet --version
+#asdf plugin-add dotnet-core https://github.com/emersonsoares/asdf-dotnet-core.git
+#echo -e '\n. $HOME/.asdf/plugins/dotnet-core/set-dotnet-home.zsh'>> ~/.zshrc
+#echo -e '\n. $HOME/.asdf/plugins/dotnet-core/set-dotnet-home.bash'>> ~/.bashrc
+#asdf install dotnet-core 2.1.809
+#asdf install dotnet-core 3.1.401
+#asdf global dotnet-core 3.1.401
+#dotnet --version
 # ASDF Go
 asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
-asdf install golang 1.15.1
-asdf global golang 1.15.1
+asdf install golang 1.17.2
+asdf global golang 1.17.2
 #Nest and Angular CLIs
 npm i -g @nestjs/cli -y
 npm install -g @angular/cli
+# Terraform
+wget https://releases.hashicorp.com/terraform/1.0.11/terraform_1.0.11_linux_amd64.zip
+sudo unzip terraform_1.0.11_linux_amd64.zip -d /usr/local/bin/
+rm -rf terraform_1.0.11_linux_amd64.zip
 # Tweaks
 sudo add-apt-repository universe
 sudo apt install gnome-tweak-tool -y
@@ -115,9 +118,3 @@ sudo apt-get install obs-studio -y
 sudo add-apt-repository ppa:openshot.developers/ppa
 sudo apt-get update
 sudo apt-get install openshot-qt -y ##Da ultima vez que instalei assim, ficava travando durante a execucao
-# Stremio
-wget https://dl.strem.io/linux/v4.4.106/stremio_4.4.106-1_amd64.deb
-sudo dpkg -i stremio*amd64.deb
-sudo apt install -f
-sudo dpkg -i stremio*amd64.deb
-
