@@ -101,6 +101,10 @@ sudo apt update
 sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret -y
 # Slack
 sudo snap install slack --classic
+# Zoom
+wget https://zoom.us/client/latest/zoom_amd64.deb -O zoom.deb
+sudo dpkg -i zoom.deb
+sudo apt-get install -f
 # Mongo DB Compass
 wget https://downloads.mongodb.com/compass/mongodb-compass_1.26.1_amd64.deb
 sudo dpkg -i mongodb-compass_1.26.1_amd64.deb
