@@ -108,6 +108,8 @@ sudo apt-get install -f
 # Mongo DB Compass
 wget https://downloads.mongodb.com/compass/mongodb-compass_1.26.1_amd64.deb
 sudo dpkg -i mongodb-compass_1.26.1_amd64.deb
+# AWS CLI
+sudo apt-get install awscli -y
 # Isolate Workspaces
 gsettings set org.gnome.shell.extensions.dash-to-dock isolate-workspaces true
 # Peek (Gif Recorder)
