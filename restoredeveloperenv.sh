@@ -85,6 +85,8 @@ node -v
 asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
 asdf install golang 1.17.2
 asdf global golang 1.17.2
+echo -e '\n. export GOROOT="$(asdf where golang)/go/"' >> ~/.zshrc
+echo -e '\n. export CC="gcc""' >> ~/.zshrc
 #Nest and Angular CLIs
 npm i -g @nestjs/cli -y
 npm install -g @angular/cli
