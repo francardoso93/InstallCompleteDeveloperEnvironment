@@ -56,6 +56,8 @@ sudo apt-get update
 sudo apt-get install terminator -y
 # Curl
 sudo apt install curl -y
+# Build Essentials
+sudo apt-get install build-essential
 # ASDF
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 cd ~/.asdf
