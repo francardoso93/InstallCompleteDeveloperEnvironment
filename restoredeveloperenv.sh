@@ -35,9 +35,9 @@ chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 kubectl version --client
 # K3S (Lightweight Kubernetes)
-#curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644
-#mkdir .kube
-#cp /etc/rancher/k3s/k3s.yaml .kube/
+curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644
+mkdir ~/.kube
+cp /etc/rancher/k3s/k3s.yaml ~/.kube/
 # Helm (Kub package manager)
 sudo snap install helm --classic
 # Add Helm Rabbit Repository # helm install --kubeconfig=/home/francisco/.kube/k3s.yaml rabbit bitnami/rabbitmq --namespace logistics
