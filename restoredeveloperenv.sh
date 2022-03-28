@@ -128,3 +128,5 @@ sudo apt-get install obs-studio -y
 sudo add-apt-repository ppa:openshot.developers/ppa
 sudo apt-get update
 sudo apt-get install openshot-qt -y ##Da ultima vez que instalei assim, ficava travando durante a execucao
+# Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
