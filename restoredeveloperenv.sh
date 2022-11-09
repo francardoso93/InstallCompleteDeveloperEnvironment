@@ -106,9 +106,7 @@ sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret -y
 # Slack
 sudo snap install slack --classic
 # Zoom
-wget https://zoom.us/client/latest/zoom_amd64.deb -O zoom.deb
-sudo dpkg -i zoom.deb
-sudo apt-get install -f
+sudo snap install zoom-client
 # Mongo DB Compass
 wget https://downloads.mongodb.com/compass/mongodb-compass_1.26.1_amd64.deb
 sudo dpkg -i mongodb-compass_1.26.1_amd64.deb
@@ -130,3 +128,5 @@ sudo apt-get update
 sudo apt-get install openshot-qt -y ##Da ultima vez que instalei assim, ficava travando durante a execucao
 # Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/francisco/.profile
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
