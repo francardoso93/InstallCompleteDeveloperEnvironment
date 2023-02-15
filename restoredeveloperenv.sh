@@ -6,9 +6,8 @@
 git config --global user.name "Francisco Cardoso"
 git config --global user.email "francardoso@outlook.com"
 # Google Chrome
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-sudo apt-get update ; sudo apt-get install google-chrome-stable -y
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
 #VsCode
 sudo snap install --classic code # or code-insiders#
 echo fs.inotify.max_user_instances=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
@@ -111,7 +110,9 @@ sudo snap install zoom-client
 wget https://downloads.mongodb.com/compass/mongodb-compass_1.26.1_amd64.deb
 sudo dpkg -i mongodb-compass_1.26.1_amd64.deb
 # AWS CLI
-sudo apt-get install awscli -y
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
 # Isolate Workspaces
 gsettings set org.gnome.shell.extensions.dash-to-dock isolate-workspaces true
 # Peek (Gif Recorder)
