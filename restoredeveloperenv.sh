@@ -33,10 +33,10 @@ curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s http
 chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 kubectl version --client
-# K3S (Lightweight Kubernetes)
-curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644
-mkdir ~/.kube
-cp /etc/rancher/k3s/k3s.yaml ~/.kube/
+# Kind (Lightweight Kubernetes)
+curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.17.0/kind-linux-amd64
+chmod +x ./kind
+sudo mv ./kind /usr/local/bin/kind
 # Helm (Kub package manager)
 sudo snap install helm --classic
 # Add Helm Rabbit Repository # helm install --kubeconfig=/home/francisco/.kube/k3s.yaml rabbit bitnami/rabbitmq --namespace logistics
