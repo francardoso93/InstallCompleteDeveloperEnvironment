@@ -25,7 +25,7 @@ sudo apt-get update
 sudo apt-get install docker-ce -y
 sudo usermod -aG docker $USER
 # Docker-Compose
-sudo curl -L https://github.com/docker/compose/releases/download/1.25.5/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+sudo curl -L https://github.com/docker/compose/releases/download/v2.15.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 # Kubectl
@@ -91,7 +91,7 @@ echo -e '\n. export CC="gcc""' >> ~/.zshrc
 #Nest and Angular CLIs
 npm i -g @nestjs/cli -y
 npm install -g @angular/cli
-# Terraform
+# Terraform ## TODO: ASDF flow
 wget https://releases.hashicorp.com/terraform/1.0.11/terraform_1.0.11_linux_amd64.zip
 sudo unzip terraform_1.0.11_linux_amd64.zip -d /usr/local/bin/
 rm -rf terraform_1.0.11_linux_amd64.zip
