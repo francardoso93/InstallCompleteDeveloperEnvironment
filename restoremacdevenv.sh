@@ -5,6 +5,8 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 # git
 brew install git
+git config --global user.name "Francisco Cardoso"
+git config --global user.email "francardoso@outlook.com"
 # chrome
 brew install --cask google-chrome
 # vscode
