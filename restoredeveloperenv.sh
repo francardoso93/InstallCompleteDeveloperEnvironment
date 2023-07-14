@@ -72,10 +72,10 @@ asdf --version
 # ASDF Node
 asdf plugin-add nodejs
 bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
-asdf install nodejs 16.13.0  
-asdf global nodejs 16.13.0 
+asdf install nodejs 18.16.0  
+asdf global nodejs 18.16.0 
 node -v
-# ASDJ Java
+# ASDF Java
 asdf plugin-add java https://github.com/halcyon/asdf-java.git
 asdf install java latest:adoptopenjdk-20
 asdf global java latest:adoptopenjdk-20
@@ -98,6 +98,9 @@ echo -e '\n. $HOME/.asdf/plugins/java/set-java-home.bash' >> ~/.bashrc
 #Nest and Angular CLIs
 # npm i -g @nestjs/cli -y
 # npm install -g @angular/cli
+# Ruby
+sudo apt-get install ruby-full
+sudo gem install bundler
 # Terraform ## TODO: ASDF flow
 wget https://releases.hashicorp.com/terraform/1.0.11/terraform_1.0.11_linux_amd64.zip
 sudo unzip terraform_1.0.11_linux_amd64.zip -d /usr/local/bin/
