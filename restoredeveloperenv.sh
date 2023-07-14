@@ -64,6 +64,7 @@ git checkout "$(git describe --abbrev=0 --tags)" # Latest version branch
 cd ~
 echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.zshrc
 echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
+echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.zshrc
 echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
 source $HOME/.asdf/asdf.sh
 source ~/.bashrc
@@ -74,6 +75,12 @@ bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-ke
 asdf install nodejs 16.13.0  
 asdf global nodejs 16.13.0 
 node -v
+# ASDJ Java
+asdf plugin-add java https://github.com/halcyon/asdf-java.git
+asdf install java latest:adoptopenjdk-20
+asdf global java latest:adoptopenjdk-20
+echo -e '\n. $HOME/.asdf/plugins/java/set-java-home.zsh' >> ~/.zshrc
+echo -e '\n. $HOME/.asdf/plugins/java/set-java-home.bash' >> ~/.bashrc
 # ASDF DotNet
 #asdf plugin-add dotnet-core https://github.com/emersonsoares/asdf-dotnet-core.git
 #echo -e '\n. $HOME/.asdf/plugins/dotnet-core/set-dotnet-home.zsh'>> ~/.zshrc
@@ -83,14 +90,14 @@ node -v
 #asdf global dotnet-core 3.1.401
 #dotnet --version
 # ASDF Go
-asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
-asdf install golang 1.17.2
-asdf global golang 1.17.2
-echo -e '\n. export GOROOT="$(asdf where golang)/go/"' >> ~/.zshrc
-echo -e '\n. export CC="gcc""' >> ~/.zshrc
+# asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+# asdf install golang 1.17.2
+# asdf global golang 1.17.2
+# echo -e '\n. export GOROOT="$(asdf where golang)/go/"' >> ~/.zshrc
+# echo -e '\n. export CC="gcc""' >> ~/.zshrc
 #Nest and Angular CLIs
-npm i -g @nestjs/cli -y
-npm install -g @angular/cli
+# npm i -g @nestjs/cli -y
+# npm install -g @angular/cli
 # Terraform ## TODO: ASDF flow
 wget https://releases.hashicorp.com/terraform/1.0.11/terraform_1.0.11_linux_amd64.zip
 sudo unzip terraform_1.0.11_linux_amd64.zip -d /usr/local/bin/
@@ -109,26 +116,26 @@ sudo snap install zoom-client
 # Discord
 sudo snap install discord
 # Mongo DB Compass
-wget https://downloads.mongodb.com/compass/mongodb-compass_1.26.1_amd64.deb
-sudo dpkg -i mongodb-compass_1.26.1_amd64.deb
+# wget https://downloads.mongodb.com/compass/mongodb-compass_1.26.1_amd64.deb
+# sudo dpkg -i mongodb-compass_1.26.1_amd64.deb
 # AWS CLI
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
 # Isolate Workspaces
 gsettings set org.gnome.shell.extensions.dash-to-dock isolate-workspaces true
-# Peek (Gif Recorder)
-sudo add-apt-repository ppa:peek-developers/stable
-sudo apt-get update
-sudo apt-get install peek -y
+# Peek (Gif Recorder) # Can't find this on Ubuntu 22
+# sudo add-apt-repository ppa:peek-developers/stable
+# sudo apt-get update
+# sudo apt-get install peek -y
 # OBS (Video Recorder)
-sudo add-apt-repository ppa:pbsproject/obs-studio
-sudo apt-get update
-sudo apt-get install obs-studio -y
+# sudo add-apt-repository ppa:pbsproject/obs-studio
+# sudo apt-get update
+# sudo apt-get install obs-studio -y
 # OpenShot (Video Editor)
-sudo add-apt-repository ppa:openshot.developers/ppa
-sudo apt-get update
-sudo apt-get install openshot-qt -y ##Da ultima vez que instalei assim, ficava travando durante a execucao
+# sudo add-apt-repository ppa:openshot.developers/ppa
+# sudo apt-get update
+# sudo apt-get install openshot-qt -y ##Da ultima vez que instalei assim, ficava travando durante a execucao
 # Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/francisco/.profile
