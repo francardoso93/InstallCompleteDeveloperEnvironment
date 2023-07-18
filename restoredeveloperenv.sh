@@ -77,8 +77,8 @@ asdf global nodejs 18.16.0
 node -v
 # ASDF Java
 asdf plugin-add java https://github.com/halcyon/asdf-java.git
-asdf install java latest:adoptopenjdk-20
-asdf global java latest:adoptopenjdk-20
+asdf install java latest:adoptopenjdk-17
+asdf global java latest:adoptopenjdk-17
 echo -e '\n. $HOME/.asdf/plugins/java/set-java-home.zsh' >> ~/.zshrc
 echo -e '\n. $HOME/.asdf/plugins/java/set-java-home.bash' >> ~/.bashrc
 # ASDF DotNet
@@ -99,7 +99,13 @@ echo -e '\n. $HOME/.asdf/plugins/java/set-java-home.bash' >> ~/.bashrc
 # npm i -g @nestjs/cli -y
 # npm install -g @angular/cli
 # Android SDK
-sudo apt update && sudo apt install android-sdk -y
+sudo snap install androidsdk
+source ~/.bashrc
+androidsdk --install "sources;android-33"
+# Android Studio
+sudo add-apt-repository ppa:maarten-fonville/android-studio -y
+sudo apt-get update -y
+sudo apt-get install android-studio -y
 # Ruby
 sudo apt-get install ruby-full -y
 sudo gem install bundler
