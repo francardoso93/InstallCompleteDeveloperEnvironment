@@ -25,3 +25,6 @@ sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
 brew install node
 # yarn
 npm install -g yarn
+# bitwarden (not so simple, still didn't make it work)
+# curl -Lso bitwarden.sh "https://func.bitwarden.com/api/dl/?app=self-host&platform=linux" && chmod 700 bitwarden.sh
+# ./bitwarden.sh install # Bitwarden instance: vault.bitwarden.com

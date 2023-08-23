@@ -106,6 +106,7 @@ androidsdk --install "sources;android-33"
 sudo add-apt-repository ppa:maarten-fonville/android-studio -y
 sudo apt-get update -y
 sudo apt-get install android-studio -y
+sudo ln -s "$(which node)" /usr/local/bin/node # for reactive native + android studio
 # Ruby
 sudo apt-get install ruby-full -y
 sudo gem install bundler
