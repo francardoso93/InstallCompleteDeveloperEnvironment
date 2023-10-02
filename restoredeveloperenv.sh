@@ -127,6 +127,8 @@ sudo snap install slack --classic
 sudo snap install zoom-client
 # Discord
 sudo snap install discord
+#psql
+sudo apt-get install -y postgresql-client
 # Mongo DB Compass
 # wget https://downloads.mongodb.com/compass/mongodb-compass_1.26.1_amd64.deb
 # sudo dpkg -i mongodb-compass_1.26.1_amd64.deb
