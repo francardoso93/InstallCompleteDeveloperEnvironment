@@ -171,4 +171,9 @@ echo -e '\n. export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 # kubens
 kubectl krew install ns
-# Kube PS1 (to show current context and ns) need to be done manually, but easy. See: https://github.com/jonmosco/kube-ps1
+# Kube PS1 (to show current context and ns) need to be done manually, but easy. See: https://github.com/jonmosco/kube-ps1sudo apt install fzf
+
+# FuzzyFinder for CLI (That's enought to get the augmented ctrl+R)
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+cd ~/.fzf/
+./install
