@@ -25,7 +25,7 @@ sudo apt-get update
 sudo apt-get install docker-ce -y
 sudo usermod -aG docker $USER
 # Docker-Compose
-sudo curl -L https://github.com/docker/compose/releases/download/v2.15.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+sudo curl -L https://github.com/docker/compose/releases/download/v2.27.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 # Kubectl
@@ -72,55 +72,32 @@ asdf --version
 # ASDF Node
 asdf plugin-add nodejs
 bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
-asdf install nodejs 18.16.0
-asdf global nodejs 18.16.0 
+asdf install nodejs latest
+asdf global nodejs latest
 node -v
-# ASDF Java
-asdf plugin-add java https://github.com/halcyon/asdf-java.git
-asdf install java latest:adoptopenjdk-17
-asdf global java latest:adoptopenjdk-17
-echo -e '\n. $HOME/.asdf/plugins/java/set-java-home.zsh' >> ~/.zshrc
-echo -e '\n. $HOME/.asdf/plugins/java/set-java-home.bash' >> ~/.bashrc
-# ASDF DotNet
-#asdf plugin-add dotnet-core https://github.com/emersonsoares/asdf-dotnet-core.git
-#echo -e '\n. $HOME/.asdf/plugins/dotnet-core/set-dotnet-home.zsh'>> ~/.zshrc
-#echo -e '\n. $HOME/.asdf/plugins/dotnet-core/set-dotnet-home.bash'>> ~/.bashrc
-#asdf install dotnet-core 2.1.809
-#asdf install dotnet-core 3.1.401
-#asdf global dotnet-core 3.1.401
-#dotnet --version
+# # ASDF Java
+# asdf plugin-add java https://github.com/halcyon/asdf-java.git
+# asdf install java latest:adoptopenjdk-17
+# asdf global java latest:adoptopenjdk-17
+# echo -e '\n. $HOME/.asdf/plugins/java/set-java-home.zsh' >> ~/.zshrc
+# echo -e '\n. $HOME/.asdf/plugins/java/set-java-home.bash' >> ~/.bashrc
 # ASDF Go
-# asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
-# asdf install golang 1.17.2
-# asdf global golang 1.17.2
-# echo -e '\n. export GOROOT="$(asdf where golang)/go/"' >> ~/.zshrc
-# echo -e '\n. export CC="gcc""' >> ~/.zshrc
-#Nest and Angular CLIs
-# npm i -g @nestjs/cli -y
-# npm install -g @angular/cli
-# Android SDK
-sudo snap install androidsdk
-source ~/.bashrc
-androidsdk --install "sources;android-33"
-# Android Studio
-sudo add-apt-repository ppa:maarten-fonville/android-studio -y
-sudo apt-get update -y
-sudo apt-get install android-studio -y
-sudo ln -s "$(which node)" /usr/local/bin/node # for reactive native + android studio
+asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+asdf install golang latest
+asdf global golang latest
+echo -e '\n. export GOROOT="$(asdf where golang)/go/"' >> ~/.zshrc
+echo -e '\n. export CC="gcc""' >> ~/.zshrc
 # Ruby
-sudo apt-get install ruby-full -y
-sudo gem install bundler
-# Terraform ## TODO: ASDF flow
-wget https://releases.hashicorp.com/terraform/1.0.11/terraform_1.0.11_linux_amd64.zip
-sudo unzip terraform_1.0.11_linux_amd64.zip -d /usr/local/bin/
-rm -rf terraform_1.0.11_linux_amd64.zip
+# sudo apt-get install ruby-full -y
+# sudo gem install bundler
+# Terraform
+asdf plugin-add terraform
+asdf install terraform latest
+# Pulumi
+curl -fsSL https://get.pulumi.com | sh
 # Tweaks
 sudo add-apt-repository universe
 sudo apt install gnome-tweak-tool -y
-# Remmina 
-sudo apt-add-repository ppa:remmina-ppa-team/remmina-next
-sudo apt update
-sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret -y
 # Slack
 sudo snap install slack --classic
 # Zoom
@@ -129,9 +106,6 @@ sudo snap install zoom-client
 sudo snap install discord
 #psql
 sudo apt-get install -y postgresql-client
-# Mongo DB Compass
-# wget https://downloads.mongodb.com/compass/mongodb-compass_1.26.1_amd64.deb
-# sudo dpkg -i mongodb-compass_1.26.1_amd64.deb
 # AWS CLI
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
