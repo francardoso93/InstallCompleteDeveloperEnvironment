@@ -49,10 +49,6 @@
 # git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 # cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 # chsh -s /bin/zsh
-# # Terminator
-# sudo add-apt-repository ppa:gnome-terminator/nightly
-# sudo apt-get update
-# sudo apt-get install terminator -y
 # # Curl
 # sudo apt install curl -y
 # # Build Essentials
@@ -163,3 +159,4 @@ sudo install -D -o root -g root -m 644 warpdotdev.gpg /etc/apt/keyrings/warpdotd
 sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/warpdotdev.gpg] https://releases.warp.dev/linux/deb stable main" > /etc/apt/sources.list.d/warpdotdev.list'
 rm warpdotdev.gpg
 sudo apt update && sudo apt install warp-terminal
+sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/warp-terminal 100 # Default Terminal
