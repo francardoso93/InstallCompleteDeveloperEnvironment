@@ -86,7 +86,7 @@
 # asdf install golang latest
 # asdf global golang latest
 # echo -e '\nexport GOROOT="$(asdf where golang)/go/"' >> ~/.zshrc
-# echo -e '\nexport CC="gcc""' >> ~/.zshrc
+# echo -e '\nexport CC="gcc"' >> ~/.zshrc
 # # Ruby
 # # sudo apt-get install ruby-full -y
 # # sudo gem install bundler
