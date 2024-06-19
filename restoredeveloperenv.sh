@@ -164,7 +164,7 @@
 # sudo dpkg -i Downloads/falcon-sensor_7.14.0-16703_amd64.deb
 # sudo /opt/CrowdStrike/falconctl -s --cid=<CCID>
 # Remember to manually update crontab to start and stop the service at work hours
-# Cloudflare warp
+# Cloudflare warp. More details on this doc: https://sonder.freshservice.com/support/solutions/articles/16000081760
 curl https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ bookworm main" | sudo tee /etc/apt/sources.list.d/cloudflare-client.list
 sudo apt update && sudo apt install cloudflare-warp -y
