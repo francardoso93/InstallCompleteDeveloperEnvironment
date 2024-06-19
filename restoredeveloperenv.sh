@@ -142,10 +142,6 @@
 # # kubens
 # kubectl krew install ns
 # Kube PS1 (to show current context and ns) need to be done manually, but easy. See: https://github.com/jonmosco/kube-ps1sudo apt install fzf
-# FuzzyFinder for CLI (That's enought to get the augmented ctrl+R)
-# git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-# cd ~/.fzf/
-# ./install
 # k6
 # sudo gpg -k
 # sudo gpg --no-default-keyring --keyring /usr/share/keyrings/k6-archive-keyring.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C5AD17C747E3415A3642D57D77C6C491D6AC1D69
@@ -185,3 +181,14 @@ pass init "Francisco" # After that, you can clone a private repo using https wit
 gh release download v2.0.2 -R Flatbook/sonder-cli --pattern "*linux_amd64.tar.gz"
 tar zxvf sonder_2.0.2_linux_amd64.tar.gz
 sudo mv sonder /usr/local/bin
+# Volta
+curl https://get.volta.sh | bash
+# Add this to your .bashrc or .zshrc
+echo -e 'export PATH=~/.volta/bin:$PATH' >> ~/.zshrc
+# Volta pnpm and node
+volta install node pnpm
+
+# FuzzyFinder for CLI (That's enought to get the augmented ctrl+R)
+# git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+# cd ~/.fzf/
+# ./install
