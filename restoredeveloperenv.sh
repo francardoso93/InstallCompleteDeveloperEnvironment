@@ -164,7 +164,24 @@
 # sudo dpkg -i Downloads/falcon-sensor_7.14.0-16703_amd64.deb
 # sudo /opt/CrowdStrike/falconctl -s --cid=<CCID>
 # Remember to manually update crontab to start and stop the service at work hours
-# Cloudflare warp. More details on this doc: https://sonder.freshservice.com/support/solutions/articles/16000081760
-curl https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
-echo "deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ bookworm main" | sudo tee /etc/apt/sources.list.d/cloudflare-client.list
-sudo apt update && sudo apt install cloudflare-warp -y
+# # Cloudflare warp. More details on this doc: https://sonder.freshservice.com/support/solutions/articles/16000081760
+# curl https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
+# echo "deb [arch=amd64 signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] https://pkg.cloudflareclient.com/ bookworm main" | sudo tee /etc/apt/sources.list.d/cloudflare-client.list
+# sudo apt update && sudo apt install cloudflare-warp -y
+# Store git pass safetly (Clone private repos using 'https')
+# https://gist.github.com/sgarciav/b709c871fb040e3444e044642e3d8709
+sudo apt install pass
+gpg --full-generate-key # Create with the name 'Francisco'
+pass init "Francisco" # After that, you can clone a private repo using https without poluting URL with access token
+# GitHub CLI
+(type -p wget >/dev/null || (sudo apt update && sudo apt-get install wget -y)) \
+&& sudo mkdir -p -m 755 /etc/apt/keyrings \
+&& wget -qO- https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null \
+&& sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg \
+&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+&& sudo apt update \
+&& sudo apt install gh -y
+# Sonder CLI
+gh release download v2.0.2 -R Flatbook/sonder-cli --pattern "*linux_amd64.tar.gz"
+tar zxvf sonder_2.0.2_linux_amd64.tar.gz
+sudo mv sonder /usr/local/bin
