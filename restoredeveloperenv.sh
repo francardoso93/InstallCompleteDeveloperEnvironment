@@ -139,6 +139,8 @@
 # echo -e '\nexport PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"' >> ~/.zshrc
 # echo -e '\nexport PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"' >> ~/.bashrc
 # source ~/.bashrc
+# stern
+#  kubectl krew install stern
 # # kubens
 # kubectl krew install ns
 # Kube PS1 (to show current context and ns) need to be done manually, but easy. See: https://github.com/jonmosco/kube-ps1sudo apt install fzf
@@ -187,6 +189,8 @@ curl https://get.volta.sh | bash
 echo -e 'export PATH=~/.volta/bin:$PATH' >> ~/.zshrc
 # Volta pnpm and node
 volta install node pnpm
+
+
 
 # FuzzyFinder for CLI (That's enought to get the augmented ctrl+R)
 # git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
