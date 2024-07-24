@@ -191,6 +191,7 @@ echo -e 'export PATH=~/.volta/bin:$PATH' >> ~/.zshrc
 volta install node pnpm
 # IstioCTL
 curl -sL https://istio.io/downloadIstioctl | sh -
+echo -e '\nexport PATH=$HOME/.istioctl/bin:$PATH' >> ~/.zshrc
 
 
 
