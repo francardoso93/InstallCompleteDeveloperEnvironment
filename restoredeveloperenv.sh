@@ -113,9 +113,9 @@
 # # sudo apt-get update
 # # sudo apt-get install peek -y
 # # OBS (Video Recorder)
-# # sudo add-apt-repository ppa:pbsproject/obs-studio
-# # sudo apt-get update
-# # sudo apt-get install obs-studio -y
+# sudo add-apt-repository ppa:pbsproject/obs-studio
+# sudo apt-get update
+# sudo apt-get install obs-studio -y
 # # OpenShot (Video Editor)
 # # sudo add-apt-repository ppa:openshot.developers/ppa
 # # sudo apt-get update
@@ -189,6 +189,8 @@ curl https://get.volta.sh | bash
 echo -e 'export PATH=~/.volta/bin:$PATH' >> ~/.zshrc
 # Volta pnpm and node
 volta install node pnpm
+# IstioCTL
+curl -sL https://istio.io/downloadIstioctl | sh -
 
 
 
