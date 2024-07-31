@@ -192,10 +192,15 @@ volta install node pnpm
 # IstioCTL
 curl -sL https://istio.io/downloadIstioctl | sh -
 echo -e '\nexport PATH=$HOME/.istioctl/bin:$PATH' >> ~/.zshrc
-
-
-
 # FuzzyFinder for CLI (That's enought to get the augmented ctrl+R)
-# git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-# cd ~/.fzf/
-# ./install
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+cd ~/.fzf/
+./install
+# jq
+sudo apt-get install jq
+# rpgrep - search for words in file
+curl -LO https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep_14.1.0-1_amd64.deb
+sudo dpkg -i ripgrep_14.1.0-1_amd64.deb
+# fd - user friendly 'find'
+sudo apt install fd-find
+
