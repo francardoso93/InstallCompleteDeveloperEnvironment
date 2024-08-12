@@ -39,6 +39,7 @@
 # sudo mv ./kind /usr/local/bin/kind
 # # Helm (Kub package manager)
 # sudo snap install helm --classic
+# helm plugin install https://github.com/databus23/helm-diff
 # # Add Helm Rabbit Repository # helm install --kubeconfig=/home/francisco/.kube/k3s.yaml rabbit bitnami/rabbitmq --namespace logistics
 # #helm repo add bitnami https://charts.bitnami.com/bitnami
 # #helm repo update
