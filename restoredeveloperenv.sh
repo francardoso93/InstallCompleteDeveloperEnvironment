@@ -204,4 +204,19 @@ curl -LO https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep_
 sudo dpkg -i ripgrep_14.1.0-1_amd64.deb
 # fd - user friendly 'find'
 sudo apt install fd-find
-
+# zsh history sync
+sudo apt install gpg git
+git clone git@github.com:wulfgarpro/history-sync.git
+cp -r history-sync ~/.oh-my-zsh/plugins
+# argocli
+curl -sLO https://github.com/argoproj/argo-workflows/releases/download/v3.5.11/argo-linux-amd64.gz
+gunzip argo-linux-amd64.gz
+chmod +x argo-linux-amd64
+sudo mv ./argo-linux-amd64 /usr/local/bin/argo
+argo version
+# Difftastic
+curl -sLO https://github.com/Wilfred/difftastic/releases/download/0.60.0/difft-x86_64-unknown-linux-gnu.tar.gz
+tar -xvzf difft-x86_64-unknown-linux-gnu.tar.gz
+chmod +x difft
+sudo mv ./difft /usr/local/bin/
+difft
