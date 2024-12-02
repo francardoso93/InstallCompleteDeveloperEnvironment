@@ -214,9 +214,28 @@ gunzip argo-linux-amd64.gz
 chmod +x argo-linux-amd64
 sudo mv ./argo-linux-amd64 /usr/local/bin/argo
 argo version
+# argocd cli
+curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
+sudo install -m 555 argocd-linux-amd64 /usr/local/bin/argocd
+rm argocd-linux-amd64
+argocd version
 # Difftastic
 curl -sLO https://github.com/Wilfred/difftastic/releases/download/0.60.0/difft-x86_64-unknown-linux-gnu.tar.gz
 tar -xvzf difft-x86_64-unknown-linux-gnu.tar.gz
 chmod +x difft
 sudo mv ./difft /usr/local/bin/
 difft
+# Must Fix# Nushell
+# sudo apt install pkg-config libssl-dev build-essential
+# curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# source ~/.bashrc
+# rustup install 1.80.1
+# cargo install nu
+# wher
+# https://github.com/awslabs/amazon-ecr-credential-helper
+# ECR credential helper # Needed for Skopeo + ECR login # https://github.com/containers/skopeo/issues/1798#issuecomment-1296309392
+sudo apt update -y
+sudo apt install amazon-ecr-credential-helper -y
+# Skopeo
+sudo apt -y update
+sudo apt -y install skopeo
