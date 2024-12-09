@@ -239,3 +239,7 @@ sudo apt install amazon-ecr-credential-helper -y
 # Skopeo
 sudo apt -y update
 sudo apt -y install skopeo
+# KubeBuilder
+# download kubebuilder and install locally.
+curl -L -o kubebuilder "https://go.kubebuilder.io/dl/latest/$(go env GOOS)/$(go env GOARCH)"
+chmod +x kubebuilder && sudo mv kubebuilder /usr/local/bin/
