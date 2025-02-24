@@ -248,7 +248,7 @@ wget https://github.com/derailed/k9s/releases/download/v0.40.5/k9s_linux_amd64.d
 sudo apt install ./k9s_linux_amd64.deb -y
 rm k9s_linux_amd64.deb
 # Wireshark
-sudo add-apt-repository ppa:wireshark-dev/stable
-sudo apt-get update
-sudo apt-get install wireshark -y
+# sudo add-apt-repository ppa:wireshark-dev/stable
+# sudo apt-get update
+# sudo apt-get install wireshark -y
 # TODO: silver-surfer (About cluster updates, let's test it)
