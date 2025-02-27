@@ -50,21 +50,19 @@ sudo apt-get install powerline fonts-powerline -y
 git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 chsh -s /bin/zsh
+# Terminator
+sudo add-apt-repository ppa:gnome-terminator/nightly
+sudo apt-get update
+sudo apt-get install terminator -y
 # Curl
 sudo apt install curl -y
 # Build Essentials
 sudo apt-get install build-essential
 # ASDF
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf
-cd ~/.asdf
-git checkout "$(git describe --abbrev=0 --tags)" # Latest version branch
-cd ~
-echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.zshrc
-echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
-echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.zshrc
-echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
-source $HOME/.asdf/asdf.sh
-source ~/.bashrc
+ASDF_BINARY_FILE=asdf-v0.16.4-linux-amd64.tar.gz
+curl -sLO https://github.com/asdf-vm/asdf/releases/download/v0.16.4/$ASDF_BINARY_FILE
+tar zxvf "$ASDF_BINARY_FILE"
+sudo mv asdf /usr/local/bin/
 asdf --version
 # ASDF Node
 asdf plugin-add nodejs
@@ -88,7 +86,7 @@ echo -e '\nexport CC="gcc"' >> ~/.zshrc
 # sudo apt-get install ruby-full -y
 # sudo gem install bundler
 # Terraform
-asdf plugin-add terraform
+asdf plugin add terraform
 asdf install terraform latest
 # Pulumi
 curl -fsSL https://get.pulumi.com | sh
@@ -151,14 +149,14 @@ kubectl krew install ns
 # echo "deb [signed-by=/usr/share/keyrings/k6-archive-keyring.gpg] https://dl.k6.io/deb stable main" | sudo tee /etc/apt/sources.list.d/k6.list
 # sudo apt-get update
 # sudo apt-get install k6
-# Warp CLI
-sudo apt-get install wget gpg -y
-wget -qO- https://releases.warp.dev/linux/keys/warp.asc | gpg --dearmor > warpdotdev.gpg
-sudo install -D -o root -g root -m 644 warpdotdev.gpg /etc/apt/keyrings/warpdotdev.gpg
-sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/warpdotdev.gpg] https://releases.warp.dev/linux/deb stable main" > /etc/apt/sources.list.d/warpdotdev.list'
-rm warpdotdev.gpg
-sudo apt update && sudo apt install warp-terminal -y
-sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/warp-terminal 100 # Default Terminal
+# # Warp CLI
+# sudo apt-get install wget gpg -y
+# wget -qO- https://releases.warp.dev/linux/keys/warp.asc | gpg --dearmor > warpdotdev.gpg
+# sudo install -D -o root -g root -m 644 warpdotdev.gpg /etc/apt/keyrings/warpdotdev.gpg
+# sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/warpdotdev.gpg] https://releases.warp.dev/linux/deb stable main" > /etc/apt/sources.list.d/warpdotdev.list'
+# rm warpdotdev.gpg
+# sudo apt update && sudo apt install warp-terminal -y
+# sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/warp-terminal 100 # Default Terminal
 # # Falcon Sensor (Get '.deb' file from Slack conversation with Felix T. Bellemare and Martin Bruno on slack. Get CID from the same conversation)
 # sudo dpkg -i Downloads/falcon-sensor_7.14.0-16703_amd64.deb
 # sudo /opt/CrowdStrike/falconctl -s --cid=<CCID>
@@ -179,10 +177,13 @@ pass init "Francisco" # After that, you can clone a private repo using https wit
 && echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
 && sudo apt update \
 && sudo apt install gh -y
-# Sonder CLI
-gh release download v2.0.2 -R Flatbook/sonder-cli --pattern "*linux_amd64.tar.gz"
-tar zxvf sonder_2.0.2_linux_amd64.tar.gz
+gh auth login
+# Sonder CLI (Must be done after gh auth)
+gh release download v2.2.0 -R Flatbook/sonder-cli --pattern "*linux_amd64.tar.gz"
+tar zxvf sonder_2.2.0_linux_amd64.tar.gz
 sudo mv sonder /usr/local/bin
+rm sonder_2.2.0_linux_amd64.tar.gz
+sonder setup
 # Volta
 curl https://get.volta.sh | bash
 # Add this to your .bashrc or .zshrc
@@ -247,8 +248,17 @@ chmod +x kubebuilder && sudo mv kubebuilder /usr/local/bin/
 wget https://github.com/derailed/k9s/releases/download/v0.40.5/k9s_linux_amd64.deb
 sudo apt install ./k9s_linux_amd64.deb -y
 rm k9s_linux_amd64.deb
+# Neovim
+NEOVIM_BINARY_FILE=nvim-linux-x86_64.tar.gz
+curl -sLO https://github.com/neovim/neovim/releases/latest/download/$NEOVIM_BINARY_FILE
+tar zxvf "$NEOVIM_BINARY_FILE"
+sudo mv nvim-linux-x86_64/bin/nvim /usr/local/bin/
+
 # Wireshark
 # sudo add-apt-repository ppa:wireshark-dev/stable
 # sudo apt-get update
 # sudo apt-get install wireshark -y
 # TODO: silver-surfer (About cluster updates, let's test it)
+
+### TODO: Will have to move several things that are adding directly to .ZSHRC file to dotfiles instead
+### TODO: I could move this entire script there.
