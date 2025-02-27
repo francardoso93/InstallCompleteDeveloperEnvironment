@@ -77,7 +77,7 @@ node -v
 # # echo -e '\n. $HOME/.asdf/plugins/java/set-java-home.zsh' >> ~/.zshrc
 # # echo -e '\n. $HOME/.asdf/plugins/java/set-java-home.bash' >> ~/.bashrc
 # # ASDF Go
-asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+asdf plugin add golang https://github.com/asdf-community/asdf-golang.git
 asdf install golang latest
 asdf global golang latest
 echo -e '\nexport GOROOT="$(asdf where golang)/go/"' >> ~/.zshrc
